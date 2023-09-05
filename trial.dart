@@ -66,7 +66,64 @@ void main() {
 
   // Conditional Expressions
   var h = 30;
-  var i = h == 30 ? true : false;
-  print(i);
+  var h1 = h == 30 ? true : false;
+  print(h1);
   // We use i as the value obtained needs to be stored somewhere
+
+  // Loops
+  // For Loop
+  for (var i = 0; i < 5; i++) {
+    print("Loop Number: ${i}");
+  }
+
+  loop1:
+  for (var i = 0; i < 5; i++) {
+    print("Loop 1 Number: ${i}");
+
+    loop2:
+    for (var j = 0; j < 3; j++) {
+      print("Loop 2 Number: ${j}");
+      if (j == 2) break loop2;
+      if (i == 4) break loop1;
+    }
+  }
+  print("Both Loops broken");
+
+  // for (var i = 0; i < 5; i++) {
+  //   print("Loop Number: ${i}");
+  // }
+
+  // loop1:
+  // for (var i = 0; i < 5; i++) {
+  //   print("Loop 1 Number: ${i}");
+
+  //   loop2:
+  //   for (var j = 0; j < 3; j++) {
+  //     print("Loop 2 Number: ${j}");
+  //     if (j == 2) break loop2;
+  //     if (i == 4) continue loop1;
+  //   }
+  // }
+  // print("Both Loops broken");
+
+  // For In Loop
+  for (var item in items) {
+    print(item);
+  }
+
+  // While Loop
+  var num3 = 3;
+  while (num3 != 0) {
+    print("Current Valuue is ${num3}");
+    num3--;
+  }
+
+  // Do While Loop
+  var num4 = 15;
+  var iter = 0;
+  do {
+    print("Iteration no. ${iter}");
+    num4 += num4;
+    iter++;
+  } while (num4 < 200);
 }
