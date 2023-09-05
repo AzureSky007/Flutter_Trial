@@ -38,4 +38,35 @@ void main() {
 
   const const1 = 'Dart Programming';
   print(const1);
+
+  var a = null;
+  var b = 15;
+  b *= 2;
+  var c = a ?? b;
+  // Checks if first value is null or not
+  // If null, it will reevaluate second value
+  // If not null, it will return first value
+  print("Value of c is");
+  print(c);
+
+  assert(b == 30);
+  // Returns Assertion Error if code is false
+  // If true, no change occurs, code continues executing
+
+  var d = c + b;
+  print("Value of d is");
+  print(d);
+
+  var e = 24;
+  var f = 5;
+  var g = e ~/ f;
+  // Returns an integer quotient
+  print("Value of g is");
+  print(g);
+
+  // Conditional Expressions
+  var h = 30;
+  var i = h == 30 ? true : false;
+  print(i);
+  // We use i as the value obtained needs to be stored somewhere
 }
