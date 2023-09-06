@@ -126,4 +126,60 @@ void main() {
     num4 += num4;
     iter++;
   } while (num4 < 200);
+
+  // Decision Making
+  // If Loop
+  var num5 = 50;
+  if (num5 > 10) {
+    print("If Loop Valid");
+  }
+
+  // If Else Loop
+  if (num5 < 15) {
+    print("If Loop Valid");
+  } else {
+    print("Else Loop Valid");
+  }
+
+  //Else If Loop
+  if (num5 < 15) {
+    print("If Loop Valid");
+  } else if (num5 == 50) {
+    print("Else If Loop Valid");
+  } else {
+    print("Else Loop Valid");
+  }
+
+  // Switch Case
+  var variable1 = "B";
+  switch (variable1) {
+    case "A":
+      {
+        print("Case 1 printed");
+      }
+      break;
+
+    case "B":
+      {
+        print("Case 2 printed");
+      }
+      break;
+
+    case "C":
+      {
+        print("Case 3 printed");
+      }
+  }
+
+  // Numbers
+  // .parse will convert string to Integer
+  print(int.parse('24'));
+  print(double.parse('24'));
+
+  var num7 = 134.21;
+  num7.abs();
+  num7.ceil();
+  num7.compareTo(num5);
+  num7.toDouble();
+  num7.truncate();
 }
