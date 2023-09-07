@@ -1,3 +1,5 @@
+// import 'dart:developer';
+
 void main() {
   // Data Types
   String greet = 'Hello World';
@@ -182,4 +184,88 @@ void main() {
   num7.compareTo(num5);
   num7.toDouble();
   num7.truncate();
+
+  // Strings
+  String str1 = "Hey";
+  String str2 = " there";
+  String str3 = str1 + str2;
+  print(str3);
+
+  String str4 = "The sum of 2 + 2 is ${2 + 2}";
+  print(str4);
+
+  // Other functions include replaceAll, compareTo, substring, toUpperCase, toLowerCase
+
+  //Boolean
+  bool test;
+  test = 12 > 5;
+  print(test);
+
+  if (str3 == true) {
+    print("String is not empty");
+  } else {
+    print("String is empty");
+  }
+
+  if (str3 == 'Hey there') {
+    print("String is not empty");
+  } else {
+    print("String is empty");
+  }
+
+  // Lists
+  List l1 = [1, 2, 3, 4, 5];
+  l1.add(6);
+  l1.remove(2);
+  print(l1);
+
+  l1.replaceRange(0, 2, [10, 20, 30]);
+  print(l1);
+
+  l1[4] = 50;
+  print(l1);
+
+  // Maps
+  Map m1 = {'Value 1': 1, 'Value 2': 2, 'Value 3': 3};
+  print(m1[0]);
+
+  m1['Value 4'] = 4;
+  print(m1);
+
+  m1.keys;
+  m1.values;
+  m1.length;
+
+  var m2 = new Map();
+  m2['Value 5'] = 5;
+  m2['Value 6'] = 6;
+  m2['Value 7'] = 7;
+
+  m1.addAll(m2);
+  m2.clear();
+  m1.remove('Value 2');
+
+  print("Current m1 is ${m1}");
+
+  m1.forEach((key, value) => print('${key}: ${value}'));
+
+  // Skipped: Symbols
+  //
+
+  // import 'dart:developer';
+
+  User class1 = User();
+  print(class1.username);
+  class1.login();
+
+  
+}
+
+class User {
+  String username = "User1";
+  int age = 20;
+
+  void login() {
+    print("Username is ${username} and Age is ${age}");
+  }
 }
