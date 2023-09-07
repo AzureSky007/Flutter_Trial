@@ -254,18 +254,33 @@ void main() {
 
   // import 'dart:developer';
 
-  User class1 = User();
+  User class1 = User('Sky', 7);
   print(class1.username);
   class1.login();
 
-  
+  User2 class2 = User2('Reaper', 271);
+  print(class2.username);
+  print(class2);
+
+  class2.publish();
+  class2.login();
 }
 
 class User {
-  String username = "User1";
-  int age = 20;
+  String username;
+  int age;
+
+  User(this.username, this.age) {}
 
   void login() {
     print("Username is ${username} and Age is ${age}");
+  }
+}
+
+class User2 extends User {
+  User2(String username, int age) : super(username, age);
+
+  void publish() {
+    print('Publish function');
   }
 }
